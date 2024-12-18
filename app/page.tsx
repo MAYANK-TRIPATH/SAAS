@@ -1,4 +1,8 @@
+"use client";
+
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 interface FeatureCardProps {
   title: string;
@@ -16,28 +20,32 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ title, description }) => {
 
 const LandingPage: React.FC = () => {
   return (
-    // Navbar
     <div className="bg-gradient-to-br from-black via-gray-900 to-gray-800 min-h-screen text-white">
       <nav className="flex justify-between items-center px-8 py-4 bg-opacity-90 backdrop-blur-md sticky top-0 z-50">
         <div className="flex items-center gap-2">
-          <img src="/loogo.png" alt="Logo" className="w-24 h-12 rounded-full" />
+          <Image
+            src="/loogo.png"
+            alt="Logo"
+            width={96}
+            height={48}
+            className="w-24 h-12 rounded-full"
+          />
           <span className="text-xl font-bold text-white">M3DIA-SAAS</span>
         </div>
         <div className="flex gap-4">
-          <a href="/sign-in">
+          <Link href="/sign-in">
             <button className="px-5 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition">
               Log In
             </button>
-          </a>
-          <a href="/sign-up">
+          </Link>
+          <Link href="/sign-up">
             <button className="px-5 py-2 text-sm font-medium text-gray-900 bg-green-400 rounded-lg hover:bg-green-500 transition">
               Sign Up
             </button>
-          </a>
+          </Link>
         </div>
       </nav>
 
-     {/* Hero */}
       <header className="flex flex-col items-center text-center py-20 px-4">
         <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text">
           Create. Edit. Share.
@@ -45,14 +53,13 @@ const LandingPage: React.FC = () => {
         <p className="text-lg md:text-2xl text-gray-400 mb-8">
           Take your media workflow to the next level with M3DIA-SAAS.
         </p>
-        <a href="/social-share">
+        <Link href="/social-share">
           <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
             Get Started
           </button>
-        </a>
+        </Link>
       </header>
 
-      {/* Cards */}
       <section className="py-16 px-6">
         <h2 className="text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-green-400 to-blue-400 text-transparent bg-clip-text">
           Features That Empower You
@@ -77,7 +84,6 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      
       <section className="bg-gradient-to-br from-black via-gray-900 to-gray-800 text-center py-16 px-4">
         <h2 className="text-4xl font-extrabold mb-4 text-white">
           Ready to Get Started?
@@ -85,10 +91,11 @@ const LandingPage: React.FC = () => {
         <p className="text-lg text-gray-300 mb-6">
           Enjoy editing and sharing media for free.
         </p>
-        <a href="/sign-in">
-        <button className="px-8 py-4 bg-white text-purple-800 font-bold text-lg rounded-lg shadow-lg hover:bg-gray-200 transition transform hover:scale-105">
-          Join Now
-        </button></a>
+        <Link href="/sign-in">
+          <button className="px-8 py-4 bg-white text-purple-800 font-bold text-lg rounded-lg shadow-lg hover:bg-gray-200 transition transform hover:scale-105">
+            Join Now
+          </button>
+        </Link>
       </section>
     </div>
   );
