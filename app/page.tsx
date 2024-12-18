@@ -30,11 +30,11 @@ const LandingPage: React.FC = () => {
             height={48}
             className="w-24 h-12 rounded-full"
           />
-          <span className="text-xl font-bold text-white">M3DIA-SAAS</span>
+          
         </div>
         <div className="flex gap-4">
           <Link href="/sign-in">
-            <button className="px-5 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition">
+            <button className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition">
               Log In
             </button>
           </Link>
