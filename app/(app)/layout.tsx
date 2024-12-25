@@ -48,8 +48,9 @@ export default function AppLayout({
         checked={sidebarOpen}
         onChange={() => setSidebarOpen(!sidebarOpen)}
       />
+
+      {/* Navbar */}
       <div className="drawer-content flex flex-col">
-        {/* Navbar */}
         <header className="w-full bg-base-200">
           <div className="navbar max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex-none lg:hidden">
@@ -63,7 +64,7 @@ export default function AppLayout({
             <div className="flex-1">
               <Link href="/" onClick={handleLogoClick}>
                 <div className="btn btn-ghost normal-case text-2xl font-bold tracking-tight cursor-pointer">
-                  Cloudinary Showcase
+                  M3DIA-SAAS
                 </div>
               </Link>
             </div>
@@ -107,18 +108,23 @@ export default function AppLayout({
         <label htmlFor="sidebar-drawer" className="drawer-overlay"></label>
         <aside className="bg-base-200 w-64 h-full flex flex-col">
           <div className="flex items-center justify-center py-4">
-            <ImageIcon className="w-10 h-10 text-primary" />
+            <Image
+              src="/loogo.png"
+              alt="Logo"
+              width={120}
+              height={95}
+              // className="w-24 h-12 rounded-full"
+            />
           </div>
           <ul className="menu p-4 w-full text-base-content flex-grow">
             {sidebarItems.map((item) => (
               <li key={item.href} className="mb-2">
                 <Link
                   href={item.href}
-                  className={`flex items-center space-x-4 px-4 py-2 rounded-lg ${
-                    pathname === item.href
+                  className={`flex items-center space-x-4 px-4 py-2 rounded-lg ${pathname === item.href
                       ? "bg-primary text-white"
                       : "hover:bg-base-300"
-                  }`}
+                    }`}
                   onClick={() => setSidebarOpen(false)}
                 >
                   <item.icon className="w-6 h-6" />
