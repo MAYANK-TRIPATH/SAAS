@@ -11,7 +11,6 @@ import {
   LayoutDashboardIcon,
   Share2Icon,
   UploadIcon,
-  ImageIcon,
 } from "lucide-react";
 
 const sidebarItems = [
