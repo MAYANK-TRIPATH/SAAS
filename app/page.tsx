@@ -20,35 +20,36 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ title, description }) => {
 
 const LandingPage: React.FC = () => {
   return (
-    <div className="bg-gradient-to-br from-black via-gray-900 to-gray-800 min-h-screen text-white">
-      <nav className="flex justify-between items-center px-8 py-4 bg-opacity-90 backdrop-blur-md sticky top-0 z-50">
-        <div className="flex items-center gap-2">
-          <Image
+    
+    <div className="bg-gradient-to-br from-black via-gray-900 to-gray-800 min-h-screen text-white ">
+      <nav className="block w-full max-w-screen-md px-4 py-2 mx-auto text-white bg-black shadow-md rounded-full border border-gray-300 lg:px-8 lg:py-3 hover:scale-105">
+  <div className="container flex flex-wrap items-center justify-between mx-auto text-gray-100">
+  <Image
             src="/loogo.png"
             alt="Logo"
             width={96}
             height={48}
             className="w-24 h-12 rounded-full"
           />
-          
-        </div>
-        <div className="flex gap-4">
+    <div className="flex gap-4">
           <Link href="/sign-in">
-            <button className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition">
+            <button className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-full hover:bg-blue-700 transition">
               Log In
             </button>
           </Link>
           <Link href="/sign-up">
-            <button className="px-5 py-2 text-sm font-medium text-gray-900 bg-green-400 rounded-lg hover:bg-green-500 transition">
+            <button className="px-5 py-2 text-sm font-medium text-gray-900 bg-green-400 rounded-full hover:bg-green-500 transition">
               Sign Up
             </button>
           </Link>
         </div>
-      </nav>
+    
+  </div>
+</nav>
 
-      <header className="flex flex-col items-center text-center py-20 px-4">
+<header className="flex flex-col items-center text-center py-20 px-4">
         <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text">
-          Create. Edit. Share.
+          Create, Edit, Share.
         </h1>
         <p className="text-lg md:text-2xl text-gray-400 mb-8">
           Take your media workflow to the next level with M3DIA-SAAS.
