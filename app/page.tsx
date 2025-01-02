@@ -29,7 +29,7 @@ const LandingPage: React.FC = () => {
             alt="Logo"
             width={96}
             height={48}
-            className="w-24 h-12 rounded-full"
+            className="w-24 h-12 rounded-full bg-white"
           />
     <div className="flex gap-4">
           <Link href="/sign-in">
