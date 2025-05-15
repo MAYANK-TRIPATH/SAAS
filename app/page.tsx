@@ -18,6 +18,25 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ title, description }) => {
   );
 };
 
+const features: FeatureCardProps[] = [
+  {
+    title: "Upload Media Files",
+    description: "Easily upload photos and videos in seconds.",
+  },
+  {
+    title: "Edit Photos",
+    description: "Adjust your photos for all platforms with ease.",
+  },
+  {
+    title: "Video Compressor",
+    description: "Compress videos without sacrificing quality.",
+  },
+  {
+    title: "Download & Share",
+    description: "Download or share files with just one click.",
+  },
+]
+
 const LandingPage: React.FC = () => {
   return (
     
@@ -62,26 +81,15 @@ const LandingPage: React.FC = () => {
       </header>
 
       <section className="py-16 px-6">
-        <h2 className="text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-green-400 to-blue-400 text-transparent bg-clip-text">
-          Features That Empower You
-        </h2>
+        <h1 className="text-4xl font-bold mb-8 flex flex-col items-center bg-gradient-to-r from-green-400 to-blue-400 text-transparent bg-clip-text">
+          Features that Empower you </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <FeatureCard
-            title="Upload Media Files"
-            description="Easily upload photos and videos in seconds."
-          />
-          <FeatureCard
-            title="Edit Photos"
-            description="Adjust your photos for all platforms with ease."
-          />
-          <FeatureCard
-            title="Video Compressor"
-            description="Compress videos without sacrificing quality."
-          />
-          <FeatureCard
-            title="Download & Share"
-            description="Download or share files with just one click."
-          />
+          {features.map((feature, index) => (
+            <FeatureCard key={index}
+            title={feature.title}
+            description={feature.description}
+            />
+          ))}
         </div>
       </section>
 
